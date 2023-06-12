@@ -124,3 +124,13 @@ for (let i = 0; i < commentsArr.length; i++) {
     card.remove();
   });
 }
+
+const signUp = document.getElementById("signUp");
+const loginForm = document.getElementById("loginForm");
+signUp.addEventListener("click", () => {
+  loginForm.style.display = "block";
+});
+const close = document.getElementById("close");
+close.addEventListener("click", () => {
+  loginForm.style.display = "none";
+});

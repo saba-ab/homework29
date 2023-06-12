@@ -90,3 +90,50 @@ section {
 .error {
   color: red;
 }
+.header {
+  width: 100%;
+  background-color: wheat;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.header button {
+  border: none;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#loginForm {
+  width: 500px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  display: none;
+}
+#loginForm form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 30px;
+}
+#loginForm form input {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#loginForm form button {
+  padding: 10px;
+  width: 40%;
+  border: none;
+  background-color: green;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#loginForm form button:nth-child(2) {
+  width: 59%;
+  background-color: red;
+}
