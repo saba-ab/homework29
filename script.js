@@ -89,7 +89,9 @@ commForm.addEventListener("submit", (e) => {
   const keys = Object.keys(commData);
   const lastKey = keys.pop();
   delete commData[lastKey];
+
   commentsArr.push(commData);
+  createUserCard(commData);
   commForm.reset();
   commData = {};
 });
@@ -101,28 +103,30 @@ section.appendChild(container);
 
 for (let i = 0; i < commentsArr.length; i++) {
   let user = commentsArr[i];
-
-  const card = document.createElement("div");
-  card.setAttribute("class", "card");
-  container.appendChild(card);
-  const name = document.createElement("p");
-  name.setAttribute("class", "bold");
-  const email = document.createElement("a");
-  email.setAttribute("href", `mailto:user.email`);
-  const bodyText = document.createElement("p");
-  bodyText.setAttribute("class", "light");
-  name.textContent = user.name;
-  email.textContent = user.email;
-  bodyText.textContent = user.body;
-  card.appendChild(name);
-  card.appendChild(email);
-  card.appendChild(bodyText);
-  const remove = document.createElement("img");
-  remove.setAttribute("src", "./media/trash-solid.svg");
-  card.appendChild(remove);
-  remove.addEventListener("click", () => {
-    card.remove();
-  });
+  function createUserCard(user) {
+    const card = document.createElement("div");
+    card.setAttribute("class", "card");
+    container.appendChild(card);
+    const name = document.createElement("p");
+    name.setAttribute("class", "bold");
+    const email = document.createElement("a");
+    email.setAttribute("href", `mailto:user.email`);
+    const bodyText = document.createElement("p");
+    bodyText.setAttribute("class", "light");
+    name.textContent = user.name;
+    email.textContent = user.email;
+    bodyText.textContent = user.body;
+    card.appendChild(name);
+    card.appendChild(email);
+    card.appendChild(bodyText);
+    const remove = document.createElement("img");
+    remove.setAttribute("src", "./media/trash-solid.svg");
+    card.appendChild(remove);
+    remove.addEventListener("click", () => {
+      card.remove();
+    });
+  }
+  createUserCard(user);
 }
 
 const signUp = document.getElementById("signUp");
