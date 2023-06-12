@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 1920px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 3%;
+}
+.card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  gap: 10px;
+  border: 1px solid rgb(8, 70, 95);
+  border-radius: 20px;
+}
+.light {
+  font-size: 18px;
+  color: rgb(67, 95, 95);
+}
+.bold {
+  font-size: 22px;
+  color: rgb(4, 6, 58);
+}
+.card a {
+  color: rgb(46, 4, 151);
+  text-decoration: none;
+}
+.card img {
+  width: 30px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 20px;
+}
+.comment-form input::placeholder {
+  font-size: 22px;
+  color: rgb(142, 142, 194);
+}
+.comment-form input {
+  padding: 10px;
+}
+.submit-btn {
+  background-color: rgb(69, 69, 197);
+  font-size: 30px;
+  font-family: Times, "Times New Roman", serif;
+  color: wheat;
+  border: none;
+  border-radius: 20px;
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  color: rgb(177, 244, 181);
+}
+.input-wrapper {
+  width: 400px;
+}
+.input-wrapper input {
+  width: 100%;
+}
+.input-wrapper::after {
+  content: "Please fill this input";
+  color: red;
+  margin-top: 3px;
+  display: none;
+}
+.error {
+  color: red;
+}
